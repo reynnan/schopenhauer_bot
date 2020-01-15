@@ -11,7 +11,6 @@ CONSUMER_KEY_SECRET = os.getenv("CONSUMER_KEY_SECRET")
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
 ACCESS_TOKEN_SECRET = os.getenv("ACCESS_TOKEN_SECRET")
 MAX_CHARACTER = 258
-HASHTAGS = ["#Schopenhauer", "#philosophy", "#quote"]
 
 def auth_to_twitter(consumer_key: str, consumer_key_secret: str, access_token: str, access_token_secret: str):
     auth = tweepy.OAuthHandler(consumer_key, consumer_key_secret)
