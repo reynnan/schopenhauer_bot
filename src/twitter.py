@@ -24,7 +24,7 @@ def should_create_thread(quote: str) -> int:
     return ceil(len(quote) / MAX_CHARACTER) > 1
 
 def tweet_new_quote(send_tweet: Callable[[str], object], quote: str, reply_tweet_id: str = None) -> object:
-    formatted_quote = quote.encode("utf-8")[0:MAX_CHARACTER]
+    formatted_quote = quote[0:MAX_CHARACTER]
     tweeted_quote = send_tweet(formatted_quote, reply_tweet_id)
     
     if should_create_thread(quote):
